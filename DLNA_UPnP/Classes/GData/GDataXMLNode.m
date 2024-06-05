@@ -13,6 +13,10 @@
  * limitations under the License.
  */
 
+#if __has_feature(objc_arc)
+    #error GData has to be compiled without ARC. Add -fno-objc-arc to unsafeFlags in your Package.swift
+#endif
+
 #define GDATAXMLNODE_DEFINE_GLOBALS 1
 #import "GDataXMLNode.h"
 
